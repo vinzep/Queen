@@ -14,6 +14,7 @@
         android:layout_marginEnd="51dp"
         android:layout_marginBottom="8dp"
         android:background="@color/colorAccent"
+        android:onClick="sing"
         android:text="Bohemian Rhapsody"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -34,6 +35,7 @@
         android:layout_marginEnd="51dp"
         android:layout_marginBottom="8dp"
         android:background="@color/colorAccent"
+        android:onClick="sing"
         android:text="site"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -53,6 +55,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="51dp"
         android:background="@android:color/holo_green_light"
+        android:onClick="sing"
         android:text="random"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -73,6 +76,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/holo_blue_bright"
+        android:onClick="sing"
         android:text="Dont Stop Me Now..."
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -83,4 +87,49 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bohemian" />
+
+    <Button
+        android:id="@+id/under"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:onClick="sing"
+        android:text="Under Pressure"
+        app:layout_constraintStart_toEndOf="@+id/bohemian"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/champions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="sing"
+        android:text="We are the Champions"
+        app:layout_constraintStart_toEndOf="@+id/bohemian"
+        app:layout_constraintTop_toBottomOf="@+id/under" />
+
+    <Button
+        android:id="@+id/rockyou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="sing"
+        android:text="We Will Rock You"
+        app:layout_constraintStart_toEndOf="@+id/bohemian"
+        app:layout_constraintTop_toBottomOf="@+id/champions" />
+
+    <Button
+        android:id="@+id/somebody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="sing"
+        android:text="Somebody To Love"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bohemian" />
+
 </android.support.constraint.ConstraintLayout>

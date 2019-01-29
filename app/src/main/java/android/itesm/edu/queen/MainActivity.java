@@ -18,12 +18,59 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         random = (Button) findViewById(R.id.random);
     }
+    private void goSong(String file){
+        Intent intent = new Intent(this, SongActivity.class );
+        intent.putExtra("file",file);
+        startActivity(intent);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 500 && resultCode == RESULT_OK){
+            random.setText(data.getStringExtra("random"));
+        }
+
+    }
 
     public void sing(View view){
         String file = "";
         switch(view.getId()){
-
+            case R.id.bohemian:
+                file = "bohemian";
+                goSong(file);
+                break;
+            case R.id.dont:
+                file = "dontstopme";
+                goSong(file);
+                break;
+            case R.id.champions:
+                file = "champions";
+                goSong(file);
+                break;
+            case R.id.rockyou:
+                file = "rockyou";
+                goSong(file);
+                break;
+            case R.id.somebody:
+                file = "somebody";
+                goSong(file);
+                break;
+            case R.id.under:
+                file = "underpressure";
+                goSong(file);
+                break;
+            case R.id.random:
+                Intent intent = new Intent(this, RandomActivity.class);
+                startActivityForResult(intent, 500);
+                break;
+            case R.id.site:
+                Uri page = Uri.parse("http://www.android.com");
+                Intent web = new Intent(Intent.ACTION_VIEW, page);
+                startActivity(web);
+                break;
         }
+
 
     }
 }
